@@ -2,17 +2,19 @@ const box= document.getElementById('weather-box');
 const temperature= document.getElementById('temperature');
 const weather= document.getElementById('weather');
 const icon= document.getElementById('icon');
-const search=document.getElementById('search');
 const btn=document.getElementById('btn');
 const city=document.getElementById('location');
 
 /*btn.onclick=('click', handleBtn());*/
+
 
 async function handleBtn(){
     var name = await document.getElementById('search').value;
     newSearch(name);
     setName(name);
 }
+
+
 
 async function setName(tname){
     var cityName=tname;
@@ -90,7 +92,9 @@ async function getFeels(name){
     const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid=f70dd531494e4c446db8acff3273ab2c', {mode: "cors"})
     const w = await response.json();
     var feels = w.main.feels_like;
-    feels.innerText=desc;
+    feel.innerText=desc;
+    var feel = document.createElement('p');
+    
 
 }
 
