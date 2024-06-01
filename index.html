@@ -1,64 +1,297 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Weather App!</title>
-    <meta charset="UTF-8"/>
-    <meta name="description" content="weather or not">
-    <meta name="author" contents="John Mackey">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <script src="https://kit.fontawesome.com/e259df9053.js" crossorigin="anonymous"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-    </script>
-    <script>
-      $(function(){
-    $("#header").load("header.html");
-      });
-    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>John Mackey | Developer</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/Subtract.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
-<body>
 
-    <!--absolute background-->
-    <div class="background"></div>
-
-    <!--box for whole page so that it sits in the middle-->
-<div class='content'>
-
-    <!--Header for jquery to pick up-->
-    <div id="header" ></div>
-
-    <div id="weather-box">
-        <h1 id="location">Nahant</h1>
-        <div class="temp-icon">
-            <div id='temperature'></div>
-            <img id='icon'></img>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">John Mackey</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div id='weather'></div>
-        
-    
+    </nav>
+    <!-- Masthead-->
+    <!--<header class="masthead bg-primary text-white text-center">
+
+
+    </header>-->
+    <!-- Portfolio Section-->
+    <section class="masthead page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fa-solid fa-up-right-from-square"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/bkfam.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fa-solid fa-up-right-from-square"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/promosis.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fa-solid fa-up-right-from-square"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/johnmd.png" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-4 ms-auto">
+                    <p class="lead">John Mackey is a full stack developer from Salem massachusetts. I bring my years of
+                        experience in programming and
+                        design to solve technical problems and make sites attractive. I make pages primarily with HTML,
+                        CSS, Javascript, jQuery, PHP and MySQL.
+                    </p>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <img height="260px" src="assets/img/painter.png"></img>
+                </div>
+            </div>
+            <!-- About Section Button-->
+
+        </div>
+    </section>
+    <!-- Contact Section-->
+    <section class="page-section text-center" id="contact">
+        <div class="container">
+            <div class="row text-center">
+                <h2 class="page-section-heading text-center text-uppercase">Contact</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom ">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="col-md-3 text-center ms-auto">
+                    <b><i class="fas fa-envelope"></i></b>&nbsp;&nbsp; <a
+                        href="mailto:xjmackey@gmail.com">xjmackey@gmail.com</a>
+
+                </div>
+                <div class="col-md-3 text-center me-auto">
+                    <b><i class="fas fa-phone"></i></b>&nbsp;&nbsp; <a href="tel:617-947-8614">617-947-8614</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">
+                        8 1/2 Allen St
+                        <br />
+                        Salem, Ma, 01970
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://linkedin.com/in/xjmackey"><i
+                            class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/jahonay"><i
+                            class="fab fa-fw fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <!-- Portfolio Modals-->
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Brooklyn Fam</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/bkfam.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Working with a charity in Brooklyn New York which celebrates diversity,
+                                    working with different cultural groups and
+                                    bringing people together for arts.
+                                </p>
+                                <!--<a target="_blank" href="" class="btn btn-primary" disabled>
+                                    See more
+                                </a>-->
+
+                                <div>
+                                    <b>Site not yet live.</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div id="ten-day">
-    <div id="day-one"></div>
-    <div id="day-two"></div>
-    <div id="day-three"></div>
-    <div id="day-four"></div>
-    <div id="day-five"></div>
-    <div id="day-six"></div>
-    <div id="day-seven"></div>
-    <div id="day-eight"></div>
-    <div id="day-nine"></div>
-    <div id="day-ten"></div>
+    <!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Promosis</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/promosis.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Worked with Promosis where I developed pages for large, international
+                                    companies. I cannot specify projects that I worked on.
+                                    But the portfolio can show the caliber of work I handled.
+                                </p>
+                                <a target="_blank" href="https://promosis.com/portfolio" class="btn btn-primary">
+                                    See more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-</div>
-
+    <!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">John Mackey Designs
+                                </h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/johnmd.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">I do a decent amount of work on my wordpress site. A fun little place to
+                                    experiment and learn more about the wordpress system.
+                                </p>
+                                <a target="_blank" href="https://johnmackeydesigns.com" class="btn btn-primary">
+                                    See more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 </body>
-<script src="./js/app.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
 </html>
