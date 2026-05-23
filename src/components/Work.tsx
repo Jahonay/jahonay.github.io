@@ -1,6 +1,3 @@
-import { useState } from "react";
-// Using the component in a parent
-
 
 interface Project {
   index: string;
